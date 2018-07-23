@@ -191,7 +191,7 @@
     Private Sub rowcomplete()
         Dim rows_complete(0) As Integer
         Dim complete As Boolean = False
-        For y = 1 To 20
+        For y = 20 To 1 Step -1
             complete = True
             For x = 1 To 10
                 If field(x, y).colour = System.Drawing.Color.White Then
@@ -205,7 +205,7 @@
         Next
         If rows_complete.Length > 1 = True Then
             For y = 1 To rows_complete.Length - 1
-                For y2 = rows_complete(y) To 19
+                For y2 = rows_complete(y) + 1 - y To 19
                     For x = 1 To 10
                         field(x, y2) = field(x, y2 + 1)
                     Next
